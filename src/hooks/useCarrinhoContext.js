@@ -40,5 +40,10 @@ export const useCarrinhoContext = () => {
     setCarrinho(carrinhoAtualizado);
   }
 
-  return { carrinho, setCarrinho, adicionarProduto, removerProduto };
+  function removerProdutoCarrinho(id) {
+    const produto = carrinho.filter((itemDoCarrinho) => itemDoCarrinho.id !== id);
+    setCarrinho(produto);
+  }
+
+  return { carrinho, setCarrinho, adicionarProduto, removerProduto, removerProdutoCarrinho };
 };
