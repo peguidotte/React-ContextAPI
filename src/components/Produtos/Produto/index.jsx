@@ -10,6 +10,7 @@ const Produto = ({
   descricao,
   preco,
   adicionarProduto,
+  removerProduto,
 }) => {
   return (
     <div className="col-12 col-md-6 col-xxl-4 pb-4">
